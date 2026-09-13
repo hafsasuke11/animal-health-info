@@ -1,0 +1,15 @@
+
+CREATE DATABASE IF NOT EXISTS user_auth;
+USE user_auth;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL UNIQUE, 
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone VARCHAR(20),
+    occupation VARCHAR(100),
+    experience VARCHAR(100),
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

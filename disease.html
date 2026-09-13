@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Diseases Encyclopedia | Animal Health Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <h1 class="logo">
+                    <i class="fas fa-clinic-medical"></i> Animal Disease Information
+                </h1>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item active"><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li class="nav-item"><a href="disease.html" class="nav-link"><i class="fas fa-book-medical"></i> Diseases</a></li>
+                    <li class="nav-item">
+                        <div class="auth-buttons">
+                            <a href="login.php" class="auth-btn login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            <a href="signup.php" class="auth-btn signup-btn"><i class="fas fa-user-plus"></i> Sign Up</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="content-wrapper">
+        <section class="disease-section">
+            <div class="section-header">
+                <h2><i class="fas fa-book-medical"></i> Animal Diseases Encyclopedia</h2>
+                <p class="section-description">Browse our comprehensive list of common animal diseases and their treatments</p>
+            </div>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchBar" placeholder="Search diseases or animals..." onkeyup="searchDisease()">
+                </div>
+            </div>
+
+            <div class="disease-grid" id="diseases">
+            
+                <div class="disease-card" data-name="Bovine Respiratory Disease" data-animal="Cow">
+                    <div class="disease-icon">
+                        <i class="fas fa-lungs-virus"></i>
+                    </div>
+                    <h3>Bovine Respiratory Disease (BRD) <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cattle</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, coughing, nasal discharge, breathing difficulty, loss of appetite</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics (like oxytetracycline), NSAIDs for fever, improved ventilation</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, stress reduction, proper nutrition</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Johne's Disease" data-animal="Cow">
+                    <div class="disease-icon">
+                        <i class="fas fa-bacterium"></i>
+                    </div>
+                    <h3>Johne's Disease <span class="severity-indicator severity-moderate">Moderate</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cattle, Goats, Sheep</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Chronic diarrhea, weight loss despite good appetite, weakness</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> No effective treatment, management focuses on preventing spread</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Culling infected animals, calf hygiene, testing program</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Peacock Pox" data-animal="Peacock">
+                    <div class="disease-icon">
+                        <i class="fas fa-feather"></i>
+                    </div>
+                    <h3>Peacock Pox <span class="severity-indicator severity-moderate">Moderate</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Peacocks, Peahens</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Skin lesions on unfeathered areas, difficulty eating</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Supportive care, topical treatments for lesions</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, mosquito control</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Rabies" data-animal="Dog">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Rabies <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Dogs, Cats</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Aggression, foaming at the mouth, paralysis</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Post-exposure vaccination</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, avoiding contact with wild animals</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Foot and Mouth Disease" data-animal="Cattle">
+                    <div class="disease-icon">
+                        <i class="fas fa-footprint"></i>
+                    </div>
+                    <h3>Foot and Mouth Disease <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cattle, Sheep, Goats</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Blisters in the mouth, fever, limping</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> No specific treatment, supportive care</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, quarantine measures</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Avian Influenza" data-animal="Birds">
+                    <div class="disease-icon">
+                        <i class="fas fa-viruses"></i>
+                    </div>
+                    <h3>Avian Influenza <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Poultry (Chickens, Ducks)</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Sudden death, respiratory issues, loss of appetite</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antiviral drugs (if caught early), supportive care</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, biosecurity practices</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Canine Parvovirus" data-animal="Dog">
+                    <div class="disease-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Canine Parvovirus <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Dogs</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Vomiting, diarrhea, lethargy</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Supportive care, fluids, anti-nausea medication</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Leptospirosis" data-animal="Dog">
+                    <div class="disease-icon">
+                        <i class="fas fa-biohazard"></i>
+                    </div>
+                    <h3>Leptospirosis <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Dogs, Rodents</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, vomiting, lethargy, kidney damage</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics (like doxycycline), supportive care</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, rodent control</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Avian Influenza" data-animal="Poultry">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Avian Influenza <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Poultry</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Sudden death, respiratory distress, drop in egg production</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antiviral medications (in early stages)</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Quarantine, vaccination, biosecurity measures</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Mastitis" data-animal="Cow">
+                    <div class="disease-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Mastitis <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Dairy Cows</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Swollen udders, reduced milk production, abnormal milk</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics, proper milking hygiene</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Proper milking technique, regular cleaning, culling infected cows</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Foot and Mouth Disease" data-animal="Cattle, Sheep, Goats">
+                    <div class="disease-icon">
+                        <i class="fas fa-foot"></i>
+                    </div>
+                    <h3>Foot and Mouth Disease <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cattle, Sheep, Goats</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, sores on mouth and hooves, limping</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> No cure, supportive care, isolation</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, biosecurity measures</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Rabies" data-animal="Dogs, Cats, Wild Animals">
+                    <div class="disease-icon">
+                        <i class="fas fa-disease"></i>
+                    </div>
+                    <h3>Rabies <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Dogs, Cats, Wild Animals</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Aggression, foaming at the mouth, paralysis</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Post-exposure prophylaxis (vaccination), no treatment after symptoms appear</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, avoiding contact with wild animals</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Canine Parvovirus" data-animal="Dogs">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Canine Parvovirus <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Dogs</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Vomiting, diarrhea (often bloody), dehydration</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Supportive care, fluids, antivirals</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, hygiene</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Feline Leukemia" data-animal="Cats">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Feline Leukemia <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cats</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Weight loss, fever, anemia, lethargy</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> No cure, supportive care</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, testing</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Bovine Tuberculosis" data-animal="Cattle">
+                    <div class="disease-icon">
+                        <i class="fas fa-bacterium"></i>
+                    </div>
+                    <h3>Bovine Tuberculosis <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cattle</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Coughing, weight loss, reduced milk production</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics (not always effective)</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Testing, culling infected animals</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Equine Influenza" data-animal="Horses">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Equine Influenza <span class="severity-indicator severity-moderate">Moderate</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Horses</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Coughing, nasal discharge, fever</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Rest, anti-inflammatory medications</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Heartworm" data-animal="Dogs">
+                    <div class="disease-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Heartworm <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Dogs</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Coughing, lethargy, difficulty breathing</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antiparasitic drugs</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Monthly preventatives</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Canine Distemper" data-animal="Dogs">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Canine Distemper <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Dogs</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, coughing, vomiting, seizures</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Supportive care, fluids</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Toxoplasmosis" data-animal="Cats">
+                    <div class="disease-icon">
+                        <i class="fas fa-bacterium"></i>
+                    </div>
+                    <h3>Toxoplasmosis <span class="severity-indicator severity-moderate">Moderate</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cats</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, lethargy, muscle pain</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antiprotozoal medications</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Avoid contact with infected litter, cook meat thoroughly</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Leptospirosis" data-animal="Dogs, Livestock">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Leptospirosis <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Dogs, Livestock</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, vomiting, abdominal pain, jaundice</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, avoiding exposure to contaminated water</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Psittacosis" data-animal="Birds">
+                    <div class="disease-icon">
+                        <i class="fas fa-feather"></i>
+                    </div>
+                    <h3>Psittacosis <span class="severity-indicator severity-moderate">Moderate</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Parrots, Birds</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Respiratory issues, lethargy, watery eyes</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Good hygiene, avoiding bird droppings</p>
+                    </div>
+                </div>
+
+                <div class="disease-card" data-name="Rabies" data-animal="All Animals">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Rabies <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> All Animals</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, headache, excessive salivation, muscle spasms, paralysis</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Immediate vaccination, supportive care</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccinate animals, avoid animal bites</p>
+                    </div>
+                </div>
+                
+                <div class="disease-card" data-name="Leptospirosis" data-animal="Livestock, Dogs">
+                    <div class="disease-icon">
+                        <i class="fas fa-bacterium"></i>
+                    </div>
+                    <h3>Leptospirosis <span class="severity-indicator severity-moderate">Moderate</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Livestock, Dogs</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, vomiting, abdominal pain, jaundice, kidney damage</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics, supportive care</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Avoid contact with contaminated water, vaccination</p>
+                    </div>
+                </div>
+                
+                <div class="disease-card" data-name="Bovine Tuberculosis" data-animal="Cattle">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Bovine Tuberculosis <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cattle</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Coughing, weight loss, fever, fatigue</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics, but difficult to treat in cattle</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Test and remove infected animals, pasteurization of milk</p>
+                    </div>
+                </div>
+                
+                <div class="disease-card" data-name="Mastitis" data-animal="Cattle">
+                    <div class="disease-icon">
+                        <i class="fas fa-bacterium"></i>
+                    </div>
+                    <h3>Mastitis <span class="severity-indicator severity-moderate">Moderate</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cattle</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Swollen udders, reduced milk production, heat in udders</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics, milking management</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Proper milking hygiene, clean equipment</p>
+                    </div>
+                </div>
+                
+                <div class="disease-card" data-name="Avian Influenza" data-animal="Poultry">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Avian Influenza <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Poultry</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, cough, diarrhea, sudden death</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antiviral drugs in early stages</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, biosecurity measures</p>
+                    </div>
+                </div>
+                
+                <div class="disease-card" data-name="Equine Infectious Anemia" data-animal="Horses">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Equine Infectious Anemia <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Horses</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, anemia, swelling in legs, weakness</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> No cure, euthanasia for severe cases</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Testing, vector control</p>
+                    </div>
+                </div>
+                
+                <div class="disease-card" data-name="Brucellosis" data-animal="Cattle, Sheep, Goats">
+                    <div class="disease-icon">
+                        <i class="fas fa-bacterium"></i>
+                    </div>
+                    <h3>Brucellosis <span class="severity-indicator severity-moderate">Moderate</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cattle, Sheep, Goats</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, joint pain, weight loss, abortion in pregnant animals</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics, but chronic in some cases</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, testing and culling infected animals</p>
+                    </div>
+                </div>
+                
+                <div class="disease-card" data-name="Cysticercosis" data-animal="Pigs">
+                    <div class="disease-icon">
+                        <i class="fas fa-bacterium"></i>
+                    </div>
+                    <h3>Cysticercosis <span class="severity-indicator severity-moderate">Moderate</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Pigs</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Abdominal pain, nausea, seizures (in humans)</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Surgery or anti-parasitic drugs</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Prevent ingestion of contaminated food or water</p>
+                    </div>
+                </div>
+                
+                <div class="disease-card" data-name="Anthrax" data-animal="Cattle, Sheep">
+                    <div class="disease-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Anthrax <span class="severity-indicator severity-high">High</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cattle, Sheep</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Sudden death, fever, swelling, respiratory distress</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antibiotics (early stage), vaccination</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Vaccination, quarantine of infected animals</p>
+                    </div>
+                </div>
+                
+                <div class="disease-card" data-name="Toxoplasmosis" data-animal="Cats, Humans">
+                    <div class="disease-icon">
+                        <i class="fas fa-bacterium"></i>
+                    </div>
+                    <h3>Toxoplasmosis <span class="severity-indicator severity-moderate">Moderate</span></h3>
+                    <div class="disease-details">
+                        <p><strong><i class="fas fa-paw"></i> Common in:</strong> Cats, Humans</p>
+                        <p><strong><i class="fas fa-notes-medical"></i> Symptoms:</strong> Fever, muscle pain, fatigue (in humans)</p>
+                        <p><strong><i class="fas fa-syringe"></i> Treatment:</strong> Antiparasitic medications</p>
+                        <p><strong><i class="fas fa-lightbulb"></i> Prevention:</strong> Proper hygiene, avoid contact with infected cat feces</p>
+                    </div>
+                </div>
+                
+                            
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><i class="fas fa-clinic-medical"></i> Animal Health Information</h3>
+                    <p>System for sharing knowledge about animal health issues.</p>
+                </div>
+                <div class="footer-disclaimer">
+                    <h3>Important Notice</h3>
+                    <p>This information is for educational purposes only and should not replace professional veterinary advice.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Animal Health Information System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function searchDisease() {
+            const input = document.getElementById("searchBar").value.toLowerCase();
+            const cards = document.querySelectorAll(".disease-card");
+
+            cards.forEach(card => {
+                const name = card.getAttribute("data-name").toLowerCase();
+                const animal = card.getAttribute("data-animal").toLowerCase();
+                if (name.includes(input) || animal.includes(input)) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+    
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mainNav = document.querySelector('.main-nav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+    
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

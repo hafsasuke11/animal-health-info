@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Disease Information System | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <h1 class="logo">
+                    <i class="fas fa-clinic-medical"></i> Animal Disease Information
+                </h1>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item active"><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li class="nav-item"><a href="disease.html" class="nav-link"><i class="fas fa-book-medical"></i> Diseases</a></li>
+                    <li class="nav-item">
+                        <div class="auth-buttons">
+                            <a href="login.php" class="auth-btn login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            <a href="signup.php" class="auth-btn signup-btn"><i class="fas fa-user-plus"></i> Sign Up</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="content-wrapper">
+        <section class="hero-section">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h2><i class="fas fa-book-medical"></i> Animal Disease Information</h2>
+                    <p class="hero-description">A simple and helpful guide to understand common animal diseases and their treatments.</p>
+                    <div class="hero-cta">
+                        <a href="disease.html" class="btn btn-primary">
+                            <i class="fas fa-book-medical"></i>Explore Diseases
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> Key Features</h2>
+                <p class="section-subtitle">Why This Project is Useful</p>
+            </div>
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Easy-to-Use Database</h3>
+                    <p>Includes information on 20+ common animal diseases</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Guided by Experts</h3>
+                    <p>Content is reviewed with the help of veterinary sources and trusted materials</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Covers All Types of Animals</h3>
+                    <p>Useful for learning about diseases in pets, farm animals, and some wild animals.</p>
+                </div>
+            </div>
+        </section>
+
+<section class="disease-grid-section">
+    <div class="section-header">
+        <h2><i class="fas fa-exclamation-triangle"></i> Common Animal Diseases</h2>
+        <p class="section-subtitle">Helps identify early signs of illness so animals can be treated on time</p>
+    </div>
+    <div class="disease-grid">
+        <div class="disease-card">
+            <div class="card-image">
+                <img src="https://cdn.britannica.com/55/174255-050-526314B6/brown-Guernsey-cow.jpg" alt="Cow">
+            </div>
+            <div class="card-content">
+                <h3>Cow Diseases</h3>
+                <ul class="disease-list">
+                    <li><strong>Mastitis:</strong> Udder inflammation, milk abnormalities</li>
+                    <li><strong>Foot and Mouth:</strong> Fever, blisters, lameness</li>
+                    <li><strong>Bovine TB:</strong> Weight loss, coughing, weakness</li>
+                </ul>
+                <a href="disease.html?animal=Cow" class="btn btn-small">
+                    <i class="fas fa-search"></i> Learn More
+                </a>
+            </div>
+        </div>
+        <div class="disease-card">
+            <div class="card-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRInKFKLo7HSnAQ5DGzi7s0OwOSoQ7qxFHyrA&s" alt="Dog">
+            </div>
+            <div class="card-content">
+                <h3>Dog Diseases</h3>
+                <ul class="disease-list">
+                    <li><strong>Rabies:</strong> Aggression, paralysis, foaming</li>
+                    <li><strong>Parvovirus:</strong> Vomiting, bloody diarrhea</li>
+                    <li><strong>Distemper:</strong> Fever, nasal discharge, seizures</li>
+                </ul>
+                <a href="disease.html?animal=Dog" class="btn btn-small">
+                    <i class="fas fa-search"></i> Learn More
+                </a>
+            </div>
+        </div>
+        <div class="disease-card">
+            <div class="card-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6d87zy2l97Gbuz1xheO71Fzw31vhLFurSyg&s" alt="Cat">
+            </div>
+            <div class="card-content">
+                <h3>Cat Diseases</h3>
+                <ul class="disease-list">
+                    <li><strong>Feline Leukemia:</strong> Anemia, weight loss</li>
+                    <li><strong>Ringworm:</strong> Circular skin lesions</li>
+                    <li><strong>Feline Herpes:</strong> Sneezing, eye discharge</li>
+                </ul>
+                <a href="disease.html?animal=Cat" class="btn btn-small">
+                    <i class="fas fa-search"></i> Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="info-section">
+            <div class="section-header">
+                <h2><i class="fas fa-lightbulb"></i> Animal Health Awareness</h2>
+                <p class="section-subtitle">Basic knowledge for pet lovers and animal caretakers</p>
+            </div>
+            <div class="info-content">
+                <p>Understanding disease symptoms early can help save animals and improve their health. Our project gives easy and reliable info about many animal diseases, what signs to look for, and basic treatment options.</p>
+            
+                <p>Please note: This is an educational project. For serious issues, always visit a real veterinarian for proper checkup and treatment.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><i class="fas fa-clinic-medical"></i> Animal Health Information</h3>
+                    <p>System for sharing knowledge about animal health issues.</p>
+                </div>
+                <div class="footer-disclaimer">
+                    <h3>Important Notice</h3>
+                    <p>This information is for educational purposes only and should not replace professional veterinary advice.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Animal Health Information System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mainNav = document.querySelector('.main-nav');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            if (mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>

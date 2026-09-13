@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Animal Health Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="auth.css"> 
+</head>
+<body>
+    <div class="auth-form-container">
+        <h2 class="form-title"><i class="fas fa-user-plus"></i> Create Account</h2>
+
+        <form action="signup.php" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username <span class="required">*</span></label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="03XXXXXXXXX">
+            </div>
+
+            <div class="form-group">
+                <label for="occupation">Occupation <span class="required">*</span></label>
+                <select id="occupation" name="occupation" required>
+                    <option value="">Select your occupation</option>
+                    <option value="veterinarian">Veterinarian</option>
+                    <option value="farmer">Farmer</option>
+                    <option value="pet_owner">Pet Owner</option>
+                    <option value="student">Student</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Experience with Animals</label>
+                <select id="experience" name="experience">
+                    <option value="">Select your experience level</option>
+                    <option value="beginner">Beginner (0-2 years)</option>
+                    <option value="intermediate">Intermediate (2-5 years)</option>
+                    <option value="advanced">Advanced (5+ years)</option>
+                    <option value="professional">Professional</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password <span class="required">*</span></label>
+                <input type="password" id="password" name="password" required 
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                       title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+            </div>
+
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password <span class="required">*</span></label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+            </div>
+
+            <div class="form-footer">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
